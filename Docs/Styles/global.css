@@ -1,26 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   outline: none;
-  font-family: poppins, sans-serif;
+  font-family: "Plus Jakarta Sans", sans-serif;
   scroll-behavior: smooth;
 }
 
 :root {
   --black-color: #1e1c1c;
   --white-color: #f7f7f7;
-}
-
-.Kreadon {
-  font-family: Kreadon, sans-serif;
-}
-
-.Verdana {
-  font-family: Verdana, sans-serif;
 }
 
 img,
@@ -44,27 +35,6 @@ a {
     opacity: 1;
     transform: translateY(0);
   }
-}
-
-.navUnderLine {
-  position: relative;
-  padding: 0 2px;
-  cursor: pointer;
-}
-
-.navUnderLine::before {
-  content: '';
-  position: absolute;
-  bottom: -3px;
-  left: 0;
-  width: 0%;
-  height: 2px;
-  background-color: #dd572d;
-  transition: 200ms all;
-}
-
-.navUnderLine:hover::before {
-  width: 100%;
 }
 
 .fadeIn {
@@ -100,3 +70,14 @@ a {
 }
 
 /* =========== */
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
