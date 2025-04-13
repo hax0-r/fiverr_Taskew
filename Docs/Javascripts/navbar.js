@@ -49,13 +49,21 @@ navbar.innerHTML = `
             </li>
             <li><a href="./about-us.html" class="hover:text-[#6c2313] transition-all font-medium duration-500">About
                     </a></li>
-            <li><a href="./services.html"
-                    class="hover:text-[#6c2313] transition-all font-medium duration-500">Services</a>
-            <li><a href="./blog.html" class="hover:text-[#6c2313] transition-all font-medium duration-500">Blog
-                    </a>
-            <li><a href="./contact.html" class="hover:text-[#6c2313] transition-all font-medium duration-500">Contact
+            <li><a href="./services.html" class="hover:text-[#6c2313] transition-all font-medium duration-500">Services</a>
+            </li>
+             <li><a href="./pricing.html" class="hover:text-[#6c2313] transition-all font-medium duration-500">Pricing
                     </a>
             </li>
+                    <li><a href="./faq.html" class="hover:text-[#6c2313] transition-all font-medium duration-500">Faq
+                    </a>
+                    </li>
+                    <li><a href="./contact.html" class="hover:text-[#6c2313] transition-all font-medium duration-500">Contact
+                    </a>
+                    </li>
+                    <li><a href="./blog.html" class="hover:text-[#6c2313] transition-all font-medium duration-500">Blog
+                            </a>
+                    </li>
+           
         </ul>
     </div>
 `
