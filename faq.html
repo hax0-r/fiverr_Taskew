@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Taskew</title>
+    <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.13/dist/lenis.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./Docs/Styles/global.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.13/dist/lenis.css">
+    <script defer src="https://unpkg.com/alpinejs@3.2.3/dist/cdn.min.js"></script>
+</head>
+
+<body>
+    <div id="navbar"></div>
+
+    <section class="bg-[#f5f7fa] relative lg:rounded-3xl overflow-hidden max-w-[1485px] w-full mx-auto p-5">
+        <img src="./Docs/Assets/icon-section-bg.svg" class="absolute w-80 bottom-0 left-8" alt="">
+        <div class="max-w-7xl w-full mx-auto z-10 relative py-20 flex items-center justify-center gap-10">
+            <div class="flex flex-col text-center">
+                <h1
+                    class="md:text-[50px] opacity-0 slidein [--slidein-delay:300ms] text-3xl leading-tight text-[#0C1524] font-semibold">
+                    Frequently Asked Questions
+                </h1>
+                <div class="flex items-center justify-center">
+                    <div
+                        class="bg-[#ff8159] items-center opacity-0 slidein [--slidein-delay:500ms] font-medium justify-center text-white md:text-lg mt-4 px-6 py-3 rounded-lg ">
+                        <span><a href="./index.html">Home</a> / Faq</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="max-w-7xl w-full mx-auto p-5 md:mt-10 mt-6">
+        <ul class="flex flex-col">
+            <li class="bg-[#f5f7fa] my-2 rounded-2xl p-2" x-data="accordion(1)">
+                <h2 @click="handleClick()"
+                    class="flex flex-row justify-between items-center gap-3 md:text-lg font-semibold p-3 cursor-pointer">
+                    <span>What services does Taskew offer?</span>
+
+                    <i :class="handleRotate()" class="fa-solid transition-all duration-500 fa-arrow-up"></i>
+                </h2>
+                <div x-ref="tab" :style="handleToggle()" class="overflow-hidden max-h-0 duration-500 transition-all">
+                    <p class="p-3 md:text-lg text-gray-900">
+                        Taskew offers a range of services including cloud consulting, cloud development,
+                        cloud migration, cloud management, cloud security, and web development. We leverage
+                        AWS to design, develop, and deploy scalable, secure, and cost-effective cloud solutions.
+                    </p>
+                </div>
+            </li>
+            <li class="bg-[#f5f7fa] my-2 rounded-2xl p-2" x-data="accordion(2)">
+                <h2 @click="handleClick()"
+                    class="flex flex-row justify-between items-center gap-3 md:text-lg font-semibold p-3 cursor-pointer">
+                    <span>How can Taskew help with cloud migration? </span>
+
+                    <i :class="handleRotate()" class="fa-solid transition-all duration-500 fa-arrow-up"></i>
+                </h2>
+                <div x-ref="tab" :style="handleToggle()" class="overflow-hidden max-h-0 duration-500 transition-all">
+                    <p class="p-3 md:text-lg text-gray-900">
+                        We assist in moving your existing applications and data to AWS with minimal downtime
+                        and disruption. Our expertise ensures a smooth transition to the cloud.
+                    </p>
+                </div>
+            </li>
+            <li class="bg-[#f5f7fa] my-2 rounded-2xl p-2" x-data="accordion(3)">
+                <h2 @click="handleClick()"
+                    class="flex flex-row justify-between items-center gap-3 md:text-lg font-semibold p-3 cursor-pointer">
+                    <span> What is included in Taskew's cloud optimization service? </span>
+
+                    <i :class="handleRotate()" class="fa-solid transition-all duration-500 fa-arrow-up"></i>
+                </h2>
+                <div x-ref="tab" :style="handleToggle()" class="overflow-hidden max-h-0 duration-500 transition-all">
+                    <p class="p-3 md:text-lg text-gray-900">
+                        Our cloud optimization service helps you reduce costs and improve efficiency by using
+                        AWS best practices and tools to optimize your cloud infrastructure.
+
+                    </p>
+                </div>
+            </li>
+            <li class="bg-[#f5f7fa] my-2 rounded-2xl p-2" x-data="accordion(4)">
+                <h2 @click="handleClick()"
+                    class="flex flex-row justify-between items-center gap-3 md:text-lg font-semibold p-3 cursor-pointer">
+                    <span>How does Taskew ensure cloud security? </span>
+
+                    <i :class="handleRotate()" class="fa-solid transition-all duration-500 fa-arrow-up"></i>
+                </h2>
+                <div x-ref="tab" :style="handleToggle()" class="overflow-hidden max-h-0 duration-500 transition-all">
+                    <p class="p-3 md:text-lg text-gray-900">
+                        We use AWS security services and features to protect your cloud assets and data from
+                        cyber threats, ensuring robust security for your cloud environment.
+                    </p>
+                </div>
+            </li>
+            <li class="bg-[#f5f7fa] my-2 rounded-2xl p-2" x-data="accordion(5)">
+                <h2 @click="handleClick()"
+                    class="flex flex-row justify-between items-center gap-3 md:text-lg font-semibold p-3 cursor-pointer">
+                    <span>Can Taskew help develop new applications on AWS?
+                    </span>
+
+                    <i :class="handleRotate()" class="fa-solid transition-all duration-500 fa-arrow-up"></i>
+                </h2>
+                <div x-ref="tab" :style="handleToggle()" class="overflow-hidden max-h-0 duration-500 transition-all">
+                    <p class="p-3 md:text-lg text-gray-900">
+                        Yes, we can help you develop and deploy new applications and services on AWS using
+                        agile and DevOps methodologies.
+                    </p>
+                </div>
+            </li>
+            <li class="bg-[#f5f7fa] my-2 rounded-2xl p-2" x-data="accordion(6)">
+                <h2 @click="handleClick()"
+                    class="flex flex-row justify-between items-center gap-3 md:text-lg font-semibold p-3 cursor-pointer">
+                    <span>What types of web development services does Taskew provide?</span>
+
+                    <i :class="handleRotate()" class="fa-solid transition-all duration-500 fa-arrow-up"></i>
+                </h2>
+                <div x-ref="tab" :style="handleToggle()" class="overflow-hidden max-h-0 duration-500 transition-all">
+                    <p class="p-3 md:text-lg text-gray-900">
+                        We offer web development services for a variety of needs, from simple landing pages to
+                        complex e-commerce platforms and mobile apps.
+                    </p>
+                </div>
+            </li>
+            <li class="bg-[#f5f7fa] my-2 rounded-2xl p-2" x-data="accordion(7)">
+                <h2 @click="handleClick()"
+                    class="flex flex-row justify-between items-center gap-3 md:text-lg font-semibold p-3 cursor-pointer">
+                    <span>What compliance frameworks does Taskew support?</span>
+
+                    <i :class="handleRotate()" class="fa-solid transition-all duration-500 fa-arrow-up"></i>
+                </h2>
+                <div x-ref="tab" :style="handleToggle()" class="overflow-hidden max-h-0 duration-500 transition-all">
+                    <p class="p-3 md:text-lg text-gray-900">
+                        We support several compliance frameworks including SOC 2, ISO 27001, HIPAA, PCI
+                        DSS 4.0.1, NIST CSF 2.0, and GDPR with the EU-US Data Privacy Framework.
+                    </p>
+                </div>
+            </li>
+            <li class="bg-[#f5f7fa] my-2 rounded-2xl p-2" x-data="accordion(8)">
+                <h2 @click="handleClick()"
+                    class="flex flex-row justify-between items-center gap-3 md:text-lg font-semibold p-3 cursor-pointer">
+                    <span>What packages does Taskew offer for compliance and security programs?</span>
+
+                    <i :class="handleRotate()" class="fa-solid transition-all duration-500 fa-arrow-up"></i>
+                </h2>
+                <div x-ref="tab" :style="handleToggle()" class="overflow-hidden max-h-0 duration-500 transition-all">
+                    <p class="p-3 md:text-lg text-gray-900">
+                        We offer two packages: <br><br>
+                        <b>Standard</b>: For teams starting with compliance, includes 1 compliance framework, Trust
+                        Center, pre-built policy template library, pre-built controls library, and continuous controls
+                        monitoring. <br><br>
+                        <b>Advanced</b>: For teams scaling and operating compliance and security programs, includes
+                        everything in Standard plus risk assessment reports, multiple approvers for policies,
+                        custom fields on controls, custom risk scoring dimensions, and custom fields on risk
+                        scenarios.
+                    </p>
+                </div>
+            </li>
+            <li class="bg-[#f5f7fa] my-2 rounded-2xl p-2" x-data="accordion(9)">
+                <h2 @click="handleClick()"
+                    class="flex flex-row justify-between items-center gap-3 md:text-lg font-semibold p-3 cursor-pointer">
+                    <span>How can I contact Taskew for more information?</span>
+
+                    <i :class="handleRotate()" class="fa-solid transition-all duration-500 fa-arrow-up"></i>
+                </h2>
+                <div x-ref="tab" :style="handleToggle()" class="overflow-hidden max-h-0 duration-500 transition-all">
+                    <p class="p-3 md:text-lg text-gray-900">
+                        You can contact us by email at <a href="mailto:support@taskew.com"
+                            class="hover:underline  text-blue-500">support@taskew.com</a>
+                    </p>
+                </div>
+            </li>
+        </ul>
+    </section>
+
+
+    <div id="footer"></div>
+    <script>
+        document.addEventListener('alpine:init', () => {
+            Alpine.store('accordion', {
+                tab: 0
+            });
+
+            Alpine.data('accordion', (idx) => ({
+                init() {
+                    this.idx = idx;
+                },
+                idx: -1,
+                handleClick() {
+                    this.$store.accordion.tab = this.$store.accordion.tab === this.idx ? 0 : this.idx;
+                },
+                handleRotate() {
+                    return this.$store.accordion.tab === this.idx ? 'rotate-180 text-[#ff8159]' : '';
+                },
+                handleToggle() {
+                    return this.$store.accordion.tab === this.idx ? `max-height: ${this.$refs.tab.scrollHeight}px` : '';
+                }
+            }));
+        })
+    </script>
+    <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+    <script src="./Docs/Javascripts/global.js"></script>
+    <script src="./Docs/Javascripts/footer.js"></script>
+    <script src="./Docs/Javascripts/navbar.js"></script>
+
+</body>
+
+</html>
